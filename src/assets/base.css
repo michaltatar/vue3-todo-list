@@ -1,0 +1,144 @@
+/* color palette from <https://github.com/vuejs/theme> */
+:root {
+  --white: #ffffff;
+  --white-soft: #f8f8f8;
+  --white-mute: #f2f2f2;
+  --gray: #cccccc;
+
+  --black: #181818;
+  --black-soft: #222222;
+  --black-mute: #282828;
+
+  --indigo: #213547;
+  --indigo-soft: #476582;
+  --indigo-light: #aac8e4;
+
+  --gray-light-1: rgba(60, 60, 60, 0.29);
+  --gray-light-2: rgba(60, 60, 60, 0.12);
+  --gray-dark-1: rgba(84, 84, 84, 0.65);
+  --gray-dark-2: rgba(84, 84, 84, 0.48);
+
+  --green: #42b883;
+  --green-light: #42d392;
+  --green-lighter: #35eb9a;
+  --green-dark: #33a06f;
+  --green-darker: #155f3e;
+
+  --blue: #3b8eed;
+  --blue-light: #549ced;
+  --blue-lighter: #50a2ff;
+  --blue-dark: #3468a3;
+  --blue-darker: #255489;
+
+  --yellow: #ffc517;
+  --yellow-light: #ffe417;
+  --yellow-lighter: #ffff17;
+  --yellow-dark: #e0ad15;
+  --yellow-darker: #bc9112;
+
+  --red: #ed3c50;
+  --red-light: #f43771;
+  --red-lighter: #fd1d7c;
+  --red-dark: #cd2d3f;
+  --red-darker: #ab2131;
+
+  --text-light-1: var(--indigo);
+  --text-light-2: rgba(60, 60, 60, 0.66);
+  --text-dark-1: var(--white);
+  --text-dark-2: rgba(235, 235, 235, 0.64);
+}
+
+:root {
+  --color-background: var(--white);
+  --color-background-soft: var(--white-soft);
+  --color-background-mute: var(--white-mute);
+
+  --color-border: var(--gray-light-2);
+  --color-border-hover: var(--gray-light-1);
+
+  --color-heading: var(--text-light-1);
+  --color-text: var(--text-light-1);
+
+  --color-list-item: var(--text-dark-2);
+  --color-form-wrapper: var(--white-soft);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: var(--black);
+    --color-background-soft: var(--black-soft);
+    --color-background-mute: var(--black-mute);
+
+    --color-border: var(--gray-dark-2);
+    --color-border-hover: var(--gray-dark-1);
+
+    --color-heading: var(--text-dark-1);
+    --color-text: var(--text-dark-2);
+
+    --color-list-item: var(--gray-dark-2);
+    --color-form-wrapper: var(--gray-dark-2);
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  position: relative;
+  font-weight: normal;
+}
+
+body {
+  min-height: 100vh;
+  color: var(--color-text);
+  background: var(--color-background);
+  transition: color 0.5s, background-color 0.5s;
+  line-height: 1.6;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
+    Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-size: 15px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body.dark-mode {
+  --color-background: var(--black);
+  --color-background-soft: var(--black-soft);
+  --color-background-mute: var(--black-mute);
+
+  --color-border: var(--gray-dark-2);
+  --color-border-hover: var(--gray-dark-1);
+
+  --color-heading: var(--text-dark-1);
+  --color-text: var(--text-dark-2);
+
+  --color-list-item: var(--gray-dark-2);
+  --color-form-wrapper: var(--gray-dark-2);
+}
+
+body.light-mode {
+  --color-background: var(--white);
+  --color-background-soft: var(--white-soft);
+  --color-background-mute: var(--white-mute);
+
+  --color-border: var(--gray-light-2);
+  --color-border-hover: var(--gray-light-1);
+
+  --color-heading: var(--text-light-1);
+  --color-text: var(--text-light-1);
+
+  --color-list-item: var(--text-dark-2);
+  --color-form-wrapper: var(--white-soft);
+}
+
+button,
+input[type='submit'] {
+  color: var(--white-mute);
+  font-family: inherit;
+  font-size: 15px;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
